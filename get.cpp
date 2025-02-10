@@ -50,9 +50,9 @@ int main(int argc, char* argv[]) {
 
     if (command == "list") {
         pm.listAvailablePackages();
-    } else if (command == "install" && argc == 3) {
+    } else if (command == "package" && argc == 3) {
         pm.installPackage(argv[2]);
-    } else if (command == "remove" && argc == 3) {
+    } else if (command == "rmpack" && argc == 3) {
         pm.removePackage(argv[2]);
     } else if (command == "search" && argc == 3) {
         pm.searchPackage(argv[2]);
@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
         pm.listInstalledPackages();
     } else {
         std::cout << "Unknown command: " << command << std::endl;
-        std::cout << "Available commands: list, install, remove, search, update, list-installed" << std::endl;
+        std::cout << "Available commands: list, package, remove, search, update, list-installed" << std::endl;
     }
 
     return 0;
